@@ -1,0 +1,45 @@
+import Footer from "./Footer";
+import Header from "./Header";
+import Navbar from "./Navbar";
+
+function Services() {
+  return (
+    <>
+      {/* Main Content */}
+      <main
+        className="flex-grow bg-cover bg-center py-10 h-svh"
+        style={{
+          backgroundImage: "url('./public/images/metroooo.png')",
+        }}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-6 px-6 max-w-4xl mx-auto mt-3 w-[100%] h-[100%] md:h-[60%]">
+          <button className="bg-blue-200 border-2 border-blue-500 text-blue-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400">
+            JOURNEY DETAILS
+          </button>
+          <button className="bg-purple-200 border-2 border-purple-500 text-purple-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400">
+            NEAREST STATION
+          </button>
+          <button className="bg-purple-200 border-2 border-purple-500 text-purple-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400">
+            METRO MAP
+          </button>
+          <button className="bg-blue-200 border-2 border-blue-500 text-blue-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400">
+            LOST & FOUND
+          </button>
+          <button className="bg-blue-200 border-2 border-blue-500 text-blue-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400">
+            NETWORK
+          </button>
+          <button className="bg-purple-200 border-2 border-purple-500 text-purple-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400">
+            SECURITY
+          </button>
+        </div>
+      </main>
+      <img
+        className="w-full h-40% object-cover"
+        src="./public/images/Indoreimage.png"
+        alt=""
+      />
+    </>
+  );
+}
+
+export default Services;
