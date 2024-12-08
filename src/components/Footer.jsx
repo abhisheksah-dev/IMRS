@@ -1,14 +1,14 @@
 function Footer() {
   return (
-    <footer className="bg-gray-500 text-white">
+    <footer className="bg-gray-500 text-white mt-1">
       <div className="flex flex-col md:flex-row  items-center justify-center p-8 gap-[40px]">
         {/* Left Section */}
         <div>
           <p className="text-lg font-semibold">For More Updates:</p>
-          <div className="flex items-center gap-3 mt-3">
+          <div className="flex items-center gap-3 ">
             {/* Social Media Icons */}
             <a
-              href="https://www.instagram.com/_abhiiiiishekk/"
+              href="https://www.instagram.com/indoremetrorailsaathi/"
               target="_blank"
               className="hover:scale-110 transition-transform"
             >
@@ -41,7 +41,7 @@ function Footer() {
               />
             </a>
             <a
-              href="https://www.linkedin.com/in/abhishekkumarsah99/"
+              href="https://www.linkedin.com/in/indoremetrorailsaathi/"
               className="hover:scale-110 transition-transform"
               target="_blank"
             >

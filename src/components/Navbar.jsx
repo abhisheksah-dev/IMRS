@@ -1,8 +1,27 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const MetroPage = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
+  const handleOnClickHome = () => {
+    navigate("/");
+  };
+  const handleOnClickServices = () => {
+    navigate("/services");
+  };
+
+  const handleOnClickFaq = () => {
+    navigate("/faqsection");
+  };
+
+  const handleOnClickIMRS = () => {
+    navigate("/IMRS");
+  };
+
+  const handleOnClickContactUs = () => {
+    navigate("/contactUs");
+  };
   const handleAboutUsClick = () => {
     setIsDropdownOpen((prev) => !prev);
   };
@@ -12,25 +31,27 @@ const MetroPage = () => {
       {/* Navigation */}
       <nav className="flex justify-end bg-gray-200 text-white px-6">
         <ul className="flex space-x-6 mt-2 text-xl">
-          <li className="hover:underline cursor-pointer">
-            <a className="text-gray-900" href="/home">
-              Home
-            </a>
+          <li
+            className="text-gray-900 no-underline hover:border-b-2 hover:border-blue-500 cursor-pointer "
+            onClick={handleOnClickHome}
+          >
+            Home
           </li>
-          <li className="hover:underline cursor-pointer">
-            <a className="text-gray-900" href="/services">
-              Services
-            </a>
+          <li
+            className="text-gray-900 no-underline hover:border-b-2  cursor-pointer "
+            onClick={handleOnClickServices}
+          >
+            Services
           </li>
 
           {/* About Us Dropdown */}
           <li className="relative">
             <div
               onClick={handleAboutUsClick}
-              className="flex items-center cursor-pointer space-x-2 text-gray-900 hover:underline"
+              className="flex items-center cursor-pointer space-x-2 text-gray-900 hover:border-b-2 hover:border-blue-500"
             >
-              <span> About Us</span>
-              <span className="text-gray-900 mt-1 ">
+              <span>About Us</span>
+              <span className="text-gray-900 mt-1">
                 <svg
                   width="16"
                   height="16"
@@ -53,29 +74,27 @@ const MetroPage = () => {
             {/* Dropdown */}
             {isDropdownOpen && (
               <ul className="absolute left-0 mt-1 bg-white text-gray-900 p-4 space-y-2 rounded-lg shadow-lg z-10">
-                <li className="hover:text-blue-500 cursor-pointer">
-                  <a className="text-gray-900" href="/project">
-                    Project
-                  </a>
+                <li
+                  className="hover:text-blue-500 cursor-pointer text-gray-900 no-underline "
+                  onClick={handleOnClickIMRS}
+                >
+                  IMRS
                 </li>
-                <li className="hover:text-blue-500 cursor-pointer">
-                  <a className="text-gray-900" href="/media">
-                    Media
-                  </a>
-                </li>
-                <li className="hover:text-blue-500 cursor-pointer">
-                  <a className="text-gray-900" href="/contact-us">
-                    Contact Us
-                  </a>
+                <li
+                  className="text-gray-900 no-underline  hover:text-blue-500 cursor-pointer "
+                  onClick={handleOnClickContactUs}
+                >
+                  Contact Us
                 </li>
               </ul>
             )}
           </li>
 
-          <li className="hover:underline cursor-pointer">
-            <a className="text-gray-900" href="/faqs">
-              FAQs
-            </a>
+          <li
+            className="text-gray-900 no-underline hover:border-b-2 hover:border-blue-500 cursor-pointer"
+            onClick={handleOnClickFaq}
+          >
+            FAQs
           </li>
         </ul>
       </nav>

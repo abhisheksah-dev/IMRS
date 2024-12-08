@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function AboutUs() {
   const navigate = useNavigate();
-
+  
   return (
     <>
       {/* Section with Background Image */}
