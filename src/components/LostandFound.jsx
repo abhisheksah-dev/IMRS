@@ -3,7 +3,7 @@ import React from "react";
 const LostAndFound = () => {
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen bg-white">
+      <div className="flex  justify-center  bg-white font-sans mb-6">
         <div className="w-full max-w-3xl p-10 bg-white rounded-lg shadow">
           <h1 className="text-4xl font-bold text-center bg-blue-900 mb-8 text-white rounded-lg p-3">
             LOST & FOUND
@@ -12,20 +12,21 @@ const LostAndFound = () => {
             Lost items? Don’t worry!!! We have a way for it ...
           </p>
           <div className="space-y-6">
-            <button className="w-full py-4 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700">
+            <button
+              className="w-full py-4 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700"
+              onClick={() =>
+                window.open("https://forms.gle/JiVBkbMUdJAwojUh7", "_blank")
+              }
+            >
               <span className="mr-2">📢</span> REGISTER LOST ITEM
             </button>
-            <button className="w-full py-4 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700">
-              <span className="mr-2">📢</span> REGISTER FOUND ITEM
-            </button>
-          </div>
-          <div className="flex justify-between mt-8">
-            <select className="flex-grow px-6 py-3 text-lg border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600">
-              <option value="lost-items">Lost Items</option>
-              <option value="found-items">Found Items</option>
-            </select>
-            <button className="ml-6 px-8 py-3 text-lg font-medium bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700">
-              CLAIM
+            <button
+              className="w-full py-4 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700"
+              onClick={() =>
+                window.open("https://forms.gle/KDRPsVcj22nJNwp48", "_blank")
+              }
+            >
+              <span className="mr-2">📢</span> REGISTER Found ITEM
             </button>
           </div>
         </div>

@@ -6,7 +6,7 @@ function Securitypage() {
   return (
     <>
       {/* Main Content */}
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col font-sans">
         <section className="relative flex-grow">
           <div className="absolute inset-0 ">
             {/* Background Image */}

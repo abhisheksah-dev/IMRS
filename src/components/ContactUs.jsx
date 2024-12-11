@@ -4,7 +4,7 @@ const ContactUs = () => {
   return (
     <>
       <div
-        className="flex items-center justify-start min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gray-800"
+        className="font-sans flex items-center justify-start min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gray-800"
         style={{
           backgroundImage: `url("/public/images/contact.png")`,
           backgroundPosition: "center",
@@ -12,12 +12,17 @@ const ContactUs = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="bg-blue-100 rounded-3xl shadow-lg p-8 w-full max-w-4xl bg-opacity-80 ml-5">
-          <div className="space-y-8">
+        <div
+          className="bg-blue-100 rounded-3xl shadow-lg p-5 w-full max-w-4xl bg-opacity-80 ml-5 font-sans relative  font-semibold text-2xl text-black"
+          style={{ top: "-30px" }}
+        >
+          <div className="space-y-5 font-sans">
             <div className="flex items-start space-x-4">
               <span className="text-3xl">📧</span>
               <div>
-                <p className="text-lg font-semibold text-black">Email:</p>
+                <p className="text-lg font-semibold text-black font-sans">
+                  Email:
+                </p>
                 <p className="text-gray-700 text-lg">
                   indoremetrorailsaathi@gmail.com
                 </p>

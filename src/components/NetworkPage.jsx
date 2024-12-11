@@ -3,7 +3,7 @@ import React from "react";
 const NetworkPage = () => {
   return (
     <>
-      <div className="flex items-center justify-center min-h-[70vh]  md:min-h-[80vh] bg-white">
+      <div className="flex items-center justify-center min-h-[70vh]  md:min-h-[80vh] bg-white font-sans">
         <div className="w-full max-w-4xl p-8 bg-white rounded-2xl shadow">
           <h1 className="text-4xl font-bold text-center text-blue-900 mb-8">
             NETWORK

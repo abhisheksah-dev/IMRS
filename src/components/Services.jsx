@@ -30,41 +30,41 @@ function Services() {
     <>
       {/* Main Content */}
       <main
-        className="flex-grow bg-cover bg-center py-10 h-svh"
+        className="flex-grow bg-cover bg-center py-10 h-svh font-sans "
         style={{
           backgroundImage: "url('./public/images/metroooo.png')",
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-6 px-6 max-w-4xl mx-auto mt-3 w-[100%] h-[100%] md:h-[60%]">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-6 px-6 max-w-4xl mx-auto mt-3 w-[100%] h-[100%] md:h-[60%] text-4xl">
           <button
-            className="bg-blue-200 border-2 border-blue-500 text-blue-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400"
+            className="bg-blue-200 border-4 border-blue-500 text-blue-800 font-semibold  py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400 text-2xl "
             onClick={handleLogInjourney}
           >
             JOURNEY DETAILS
           </button>
           <button
-            className="bg-purple-200 border-2 border-purple-500 text-purple-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400"
+            className="bg-purple-200 border-4 border-purple-500 text-purple-800 font-semibold text-2xl py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400 "
             onClick={handleLogInstation}
           >
             NEAREST STATION
           </button>
-          <button className="bg-purple-200 border-2 border-purple-500 text-purple-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400">
+          <button className="bg-purple-200 border-4 border-purple-500 text-purple-800 font-semibold text-2xl py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400">
             METRO MAP
           </button>
           <button
-            className="bg-blue-200 border-2 border-blue-500 text-blue-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400"
+            className="bg-blue-200 border-4 border-blue-500 text-blue-800 font-semibold text-2xl py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400"
             onClick={handleLogLostAndFound}
           >
             LOST & FOUND
           </button>
           <button
-            className="bg-blue-200 border-2 border-blue-500 text-blue-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400"
+            className="bg-blue-200 border-4 border-blue-500 text-blue-800 font-semibold text-2xl py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400"
             onClick={handleLogNetworkPage}
           >
             NETWORK
           </button>
           <button
-            className="bg-purple-200 border-2 border-purple-500 text-purple-800 font-semibold text-lg py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400"
+            className="bg-purple-200 border-4 border-purple-500 text-purple-800 font-semibold text-2xl py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400"
             onClick={handleLogHelpline}
           >
             SECURITY

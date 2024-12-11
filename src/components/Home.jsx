@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import HorizontalImageScroll from "./HorizontalImageScroll";
 
 function Home() {
   const images = [
@@ -25,7 +26,7 @@ function Home() {
 
   // Automatic sliding every 3 seconds
   useEffect(() => {
-    slideInterval.current = setInterval(nextSlide, 3000); // Slide every 3 seconds
+    slideInterval.current = setInterval(nextSlide, 4000); // Slide every 3 seconds
     return () => clearInterval(slideInterval.current); // Cleanup interval on unmount
   }, []);
 
@@ -52,12 +53,26 @@ function Home() {
 
   return (
     <>
-      <div>
-        <img src="./public/images/head1home.png" alt="Header" />
+      <div className="relative font-sans">
+        {/* Marquee text with Tailwind animation */}
+        <div className="absolute top-[40%] left-0 w-full bg-gray-300 text-white text-center py-2 overflow-hidden bg-opacity-75">
+          <div className="marquee-content animate-marquee flex justify-center items-center whitespace-nowrap lg:h-10 text-black text-xl lg:text-3xl font-sans font-semibold">
+            🙏 Hello • नमस्ते • Bonjour • Hola • नमस्कार • Ciao • こんにちは •
+            Olà • ख़म्मा घनी • नोमस्ते • सत श्री अकाल • जय जिनेन्द्र •
+            वड़क्कम • आदाब  🙏  
+          </div>
+        </div>
+
+        {/* Image */}
+        <img
+          className="w-full max-h-[60vh]"
+          src="./public/images/maintrain.svg"
+          alt="Header"
+        />
       </div>
 
       <div
-        className="flex flex-col flex-grow bg-cover bg-center py-10 h-[40vh] gap-3"
+        className="flex flex-col flex-grow bg-cover bg-center py-10 h-[40vh] gap-3 font-sans mb-1"
         style={{
           backgroundImage: "url('./public/images/black.png')",
         }}
@@ -119,143 +134,150 @@ function Home() {
         </div>
       </div>
       <div
-        className="flex items-center justify-center bg-cover bg-center py-10 h-[10vh] gap-3"
+        className="flex items-center justify-center bg-cover bg-center py-10 h-[10vh] gap-3 mt-1 shadow-md"
         style={{
           backgroundImage: "url('./public/images/black.png')",
         }}
       >
-        <p className="flex text-5xl font-bold text-white items-center justify-center">
+        <p className="flex text-5xl font-bold text-white items-center justify-center font-sans">
           INSIDERS OF IMRS
         </p>
       </div>
       {/* insider od imrs ka nicha */}
 
       {/* first page 1 */}
-      <div className="bg-[#C9EAF6]">
-        <h1 className="text-4xl font-bold text-center ">
-          Confused how to reach your destination easily?
-        </h1>
-        <div className="flex items-center justify-center">
-          <div className="flex-1">
-            <img src="./public/images/studious.png" alt="" />
-          </div>
-          <div className="flex-1  ">
-            <div className="flex flex-col items-center gap-3">
-              <h1 className="text-3xl font-bold">Here's the solution,</h1>
-              <p className="text-center text-lg">
-                Just enter your source and destination location and get time to
-                reach, fare, duration of journey and number of stops to your
-                destination in one click.
-              </p>
-              <button
-                type="button"
-                className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
-              >
-                Explore Now
-                <span className="ml-2 text-3xl">&#8594;</span>{" "}
-                {/* Increased arrow size and spacing */}
-              </button>
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-3 p-2 m-3 font-sans">
+        <div className="bg-[#C9EAF6] rounded-2xl p-2 shadow-xl hover:scale-95 transition-transform duration-300 ease-in-out font-sans">
+          <h1 className="text-4xl font-bold text-center ">
+            Confused how to reach your destination easily?
+          </h1>
+          <div className="flex items-center justify-center">
+            <div className="flex-1">
+              <img src="./public/images/studious.png" alt="" />
+            </div>
+            <div className="flex-1 lg:mt-16 ">
+              <div className="flex flex-col items-center gap-3">
+                <h1 className="text-3xl font-bold ">Here's the solution,</h1>
+                <p className="text-center text-lg font-sans">
+                  Just enter your source and destination location and get time
+                  to reach, fare, duration of journey and number of stops to
+                  your destination in one click.
+                </p>
+                <button
+                  type="button"
+                  className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
+                >
+                  Explore Now
+                  <span className="ml-2 text-3xl">&#8594;</span>{" "}
+                  {/* Increased arrow size and spacing */}
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* first page 2 */}
-      <div className="bg-[#D9AAFF]">
-        <h1 className="text-4xl font-bold text-center ">
-          Wanted to know your nearest metro stations ?{" "}
-        </h1>
-        <div className="flex items-center justify-center">
-          <div className="flex-1  ">
-            <div className="flex flex-col items-center gap-3">
-              <h1 className="text-3xl font-bold"> Here’s the way to it,</h1>
-              <p className="text-center text-lg">
-                Just enter your location and get all the nearest stations
-                available with their respective distances from your station in
-                one click.
-              </p>
-              <button
-                type="button"
-                className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
-              >
-                Explore Now
-                <span className="ml-2 text-3xl">&#8594;</span>{" "}
-                {/* Increased arrow size and spacing */}
-              </button>
+        {/* first page 2 */}
+        <div className="bg-[#D9AAFF] rounded-2xl p-2 shadow-xl hover:scale-95 transition-transform duration-300 ease-in-out">
+          <h1 className="text-4xl font-bold text-center ">
+            Wanted to know your nearest metro stations ?{" "}
+          </h1>
+          <div className="flex items-center justify-between">
+            <div className="flex-1  ">
+              <div className="flex flex-col items-center gap-3">
+                <h1 className="text-3xl font-bold "> Here’s the way to it,</h1>
+                <p className="text-center text-lg ">
+                  Just enter your location and get all the nearest stations
+                  available with their respective distances from your station in
+                  one click.
+                </p>
+                <button
+                  type="button"
+                  className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
+                >
+                  Explore Now
+                  <span className="ml-2 text-3xl">&#8594;</span>{" "}
+                  {/* Increased arrow size and spacing */}
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="flex-1">
-            <img src="./public/images/central.png" alt="" />
-          </div>
-        </div>
-      </div>
-      {/* first page 3 */}
-      <div className="bg-[#C9EAF6]">
-        <h1 className="text-4xl font-bold text-center ">
-          Lost your valuables or found someone’s essentials ?
-        </h1>
-        <div className="flex items-center justify-center">
-          <div className="flex-1">
-            <img src="./public/images/pocket.png" alt="" />
-          </div>
-          <div className="flex-1  ">
-            <div className="flex flex-col items-center gap-3">
-              <h1 className="text-3xl font-bold"> Reach out to us,</h1>
-              <p className="text-center text-lg">
-                If you have lost your valuables or found someone’s essentials
-                please feel free to contact us. We care for you and will try our
-                best to reach it to you.
-              </p>
-              <button
-                type="button"
-                className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
-              >
-                Explore Now
-                <span className="ml-2 text-3xl">&#8594;</span>{" "}
-                {/* Increased arrow size and spacing */}
-              </button>
+            <div className="flex-1 justify-center items-center">
+              <img src="./public/images/central.png" alt="" />
             </div>
           </div>
         </div>
-      </div>
-      {/* first page 4 */}
-      <div className="bg-[#C9EAF6]">
-        <h1 className="text-4xl font-bold text-center ">
-          Wanted to get the most interactive metro map ?
-        </h1>
-        <div className="flex items-center justify-center">
-          <div className="flex-1  ">
-            <div className="flex flex-col items-center gap-3">
-              <h1 className="text-3xl font-bold"> Have a sneak-peek,</h1>
-              <p className="text-center text-lg">
-                Get the most interactive metro map with railway station, bus
-                station, airport and i-bus connectivity to the metro lines and
-                elevated/ underground stations
-              </p>
-              <button
-                type="button"
-                className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
-              >
-                Explore Now
-                <span className="ml-2 text-3xl">&#8594;</span>{" "}
-                {/* Increased arrow size and spacing */}
-              </button>
+        {/* first page 3 */}
+        <div className="bg-[#C9EAF6] rounded-2xl p-2 lg:bg-[#D9AAFF] shadow-xl hover:scale-95 transition-transform duration-300 ease-in-out">
+          <h1 className="text-4xl font-bold text-center ">
+            Lost your valuables or found someone’s essentials ?
+          </h1>
+          <div className="flex items-center justify-center">
+            <div className="flex-1">
+              <img src="./public/images/pocket.png" alt="" />
+            </div>
+            <div className="flex-1  ">
+              <div className="flex flex-col items-center gap-3">
+                <h1 className="text-3xl font-bold "> Reach out to us,</h1>
+                <p className="text-center text-lg ">
+                  If you have lost your valuables or found someone’s essentials
+                  please feel free to contact us. We care for you and will try
+                  our best to reach it to you.
+                </p>
+                <button
+                  type="button"
+                  className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
+                >
+                  Explore Now
+                  <span className="ml-2 text-3xl">&#8594;</span>{" "}
+                  {/* Increased arrow size and spacing */}
+                </button>
+              </div>
             </div>
           </div>
-          <div className="flex-1">
-            <img src="./public/images/map.png" alt="" />
+        </div>
+        {/* first page 4 */}
+        <div className="bg-[#D9AAFF] rounded-2xl p-2 lg:bg-[#C9EAF6] shadow-xl hover:scale-95 transition-transform duration-300 ease-in-out">
+          <h1 className="text-4xl font-bold text-center  ">
+            Wanted to get the most interactive metro map ?
+          </h1>
+          <div className="flex items-center justify-center">
+            <div className="flex-1  lg:mt-">
+              <div className="flex flex-col items-center gap-3">
+                <h1 className="text-3xl font-bold "> Have a sneak-peek,</h1>
+                <p className="text-center text-lg ">
+                  Get the most interactive metro map with railway station, bus
+                  station, airport and i-bus connectivity to the metro lines and
+                  elevated/ underground stations
+                </p>
+                <button
+                  type="button"
+                  className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
+                >
+                  Explore Now
+                  <span className="ml-2 text-3xl">&#8594;</span>{" "}
+                  {/* Increased arrow size and spacing */}
+                </button>
+              </div>
+            </div>
+            <div className="flex-1">
+              <img src="./public/images/map.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
       <div
-        className="flex items-center justify-center bg-cover bg-center py-10 h-[10vh] gap-3"
+        className="flex items-center justify-center bg-cover bg-center py-10 h-[10vh] gap-3 mt-1 mb-1 font-sans"
         style={{
           backgroundImage: "url('./public/images/black.png')",
         }}
       >
-        <p className="text-4xl font-bold text-white text-center">
+        <p className="fex items-center justify-center text-4xl font-bold text-white text-center font-sans">
           INDORE METRO RAIL STATIONS
         </p>
+      </div>
+
+      <HorizontalImageScroll />
+      <div>
+        <img className="mb-2" src="./public/images/elavated.png" alt="" />
       </div>
     </>
   );

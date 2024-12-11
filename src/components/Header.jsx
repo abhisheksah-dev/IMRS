@@ -14,7 +14,7 @@ function Header({ setLoading }) {
   };
 
   return (
-    <div className="flex justify-between items-center bg-[#48CAE4] h-[90px]">
+    <div className="flex justify-between items-center bg-gradient-to-r from-[#48CAE4] to-[#0077B6] h-[90px] font-sans">
       <div>
         <img
           className="w-[100px] bg-inherit"
@@ -22,12 +22,12 @@ function Header({ setLoading }) {
           alt="logo"
         />
       </div>
-      <div className="text-lg ml-4">
+      <div className="text-lg mr-3 font-sans">
         {isAuthenticated && <span> welcome {user.name} &nbsp; </span>}
         {isAuthenticated ? (
           <button
             type="button"
-            className="btn btn-warning hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 shadow-[0_0px_50px_rgba(59,130,246,0.6)] cursor-grab"
+            className="btn btn-warning hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 shadow-[0_0px_50px_rgba(59,130,246,0.6)] cursor-grab "
             onClick={() =>
               logout({ logoutParams: { returnTo: window.location.origin } })
             }
@@ -37,7 +37,7 @@ function Header({ setLoading }) {
         ) : (
           <button
             type="button"
-            className="btn btn-warning hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 shadow-[0_0px_50px_rgba(59,130,246,0.6)] cursor-grab"
+            className="btn btn-warning hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 shadow-[0_0px_50px_rgba(59,130,246,0.6)] cursor-grab font-sans "
             onClick={() => {
               handleLogInClick();
               loginWithRedirect();

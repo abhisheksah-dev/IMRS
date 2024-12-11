@@ -13,11 +13,11 @@ const HelplineSection = () => {
 
   return (
     <>
-      <div className="bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" py-12 font-sans">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-sans">
           <h2
             className="text-4xl font-bold text-center text-slate-100 mb-8 bg-[#35045D]
- p-2 rounded-2xl"
+ p-2 rounded-2xl font-sans"
           >
             Security
           </h2>
@@ -25,7 +25,7 @@ const HelplineSection = () => {
             {helplineData.map((helpline, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between bg-purple-200 rounded-lg p-4 shadow-md"
+                className="flex items-center justify-between bg-[#D3D5FF] rounded-lg p-4 shadow-md"
               >
                 <span className="text-xl font-medium bg-purple-800 py-2 px-4 rounded-2xl text-slate-100">
                   {helpline.title}

@@ -27,9 +27,9 @@ const MetroPage = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col font-sans">
       {/* Navigation */}
-      <nav className="flex justify-end bg-gray-200 text-white px-6">
+      <nav className="flex justify-end bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 text-white px-6">
         <ul className="flex space-x-6 mt-2 text-xl">
           <li
             className="text-gray-900 no-underline hover:border-b-2 hover:border-blue-500 cursor-pointer "
@@ -38,7 +38,7 @@ const MetroPage = () => {
             Home
           </li>
           <li
-            className="text-gray-900 no-underline hover:border-b-2  cursor-pointer "
+            className="text-gray-900 no-underline hover:border-b-2 hover:border-blue-500   cursor-pointer "
             onClick={handleOnClickServices}
           >
             Services
@@ -75,7 +75,7 @@ const MetroPage = () => {
             {isDropdownOpen && (
               <ul className="absolute left-0 mt-1 bg-white text-gray-900 p-4 space-y-2 rounded-lg shadow-lg z-10">
                 <li
-                  className="hover:text-blue-500 cursor-pointer text-gray-900 no-underline "
+                  className="hover:text-blue-500 cursor-pointer text-gray-900 no-underline font-sans"
                   onClick={handleOnClickIMRS}
                 >
                   IMRS
