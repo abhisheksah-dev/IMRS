@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+
 const MetroPage = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null); // Create a reference for the dropdown
   const navigate = useNavigate();
 
   const handleOnClickHome = () => {
@@ -22,9 +24,24 @@ const MetroPage = () => {
   const handleOnClickContactUs = () => {
     navigate("/contactUs");
   };
+
   const handleAboutUsClick = () => {
     setIsDropdownOpen((prev) => !prev);
   };
+
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false); // Close dropdown if clicked outside
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col font-sans">
@@ -73,7 +90,10 @@ const MetroPage = () => {
 
             {/* Dropdown */}
             {isDropdownOpen && (
-              <ul className="absolute left-0 mt-1 bg-white text-gray-900 p-4 space-y-2 rounded-lg shadow-lg z-10">
+              <ul
+                ref={dropdownRef}
+                className="absolute left-0 mt-1 bg-white text-gray-900 p-4 space-y-2 rounded-lg shadow-lg z-10"
+              >
                 <li
                   className="hover:text-blue-500 cursor-pointer text-gray-900 no-underline font-sans"
                   onClick={handleOnClickIMRS}

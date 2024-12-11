@@ -166,6 +166,7 @@ function Home() {
                 <button
                   type="button"
                   className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
+                  onClick={() => window.open("/journeydetails", "_blank")}
                 >
                   Explore Now
                   <span className="ml-2 text-3xl">&#8594;</span>{" "}
@@ -193,6 +194,7 @@ function Home() {
                 <button
                   type="button"
                   className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
+                  onClick={() => window.open("/neareststation", "_blank")}
                 >
                   Explore Now
                   <span className="ml-2 text-3xl">&#8594;</span>{" "}
@@ -225,6 +227,7 @@ function Home() {
                 <button
                   type="button"
                   className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
+                  onClick={() => window.open("/lostandfound", "_blank")}
                 >
                   Explore Now
                   <span className="ml-2 text-3xl">&#8594;</span>{" "}
@@ -251,6 +254,7 @@ function Home() {
                 <button
                   type="button"
                   className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
+                  onClick={() => window.open("/networkpage", "_blank")}
                 >
                   Explore Now
                   <span className="ml-2 text-3xl">&#8594;</span>{" "}

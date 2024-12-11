@@ -21,7 +21,7 @@ function AboutUs() {
                       </h2>
                     </div>
                     <div className="mx-auto max-w-full sm:max-w-3xl md:max-w-4xl px-5 sm:px-8 py-5 sm:py-8 rounded-xl shadow-lg text-justify bg-transparent bg-opacity-50">
-                      <p className=" text-2xl sm:text-lg md:text-xl text-gray-800 leading-relaxed font-sans text-center">
+                      <p className=" text-2xl sm:text-lg md:text-lg text-gray-800 leading-relaxed font-sans text-center">
                         Our project introduces a web-based Indore Metro
                         Management System that aims to tackle everyday
                         challenges faced by metro passengers. Imagine a tourist

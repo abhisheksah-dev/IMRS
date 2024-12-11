@@ -3,8 +3,11 @@ import React from "react";
 const LostAndFound = () => {
   return (
     <>
-      <div className="flex  justify-center  bg-white font-sans mb-6">
-        <div className="w-full max-w-3xl p-10 bg-white rounded-lg shadow">
+      <div
+        className="flex  justify-center  bg-white font-sans mb-7
+       mt-4"
+      >
+        <div className="w-full max-w-3xl p-10 bg-white rounded-xl shadow-lg">
           <h1 className="text-4xl font-bold text-center bg-blue-900 mb-8 text-white rounded-lg p-3">
             LOST & FOUND
           </h1>

@@ -48,7 +48,15 @@ function Services() {
           >
             NEAREST STATION
           </button>
-          <button className="bg-purple-200 border-4 border-purple-500 text-purple-800 font-semibold text-2xl py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400">
+          <button
+            className="bg-purple-200 border-4 border-purple-500 text-purple-800 font-semibold text-2xl py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400"
+            onClick={() =>
+              window.open(
+                "https://www.google.com/maps/d/u/0/embed?mid=1ZcYR1wIHCaBlOlPyMs5vYMNytnNaXac&ehbc=2E312F&noprof=1",
+                "_blank"
+              )
+            }
+          >
             METRO MAP
           </button>
           <button
