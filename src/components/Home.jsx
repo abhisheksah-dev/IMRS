@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import HorizontalImageScroll from "./HorizontalImageScroll";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const images = [
@@ -8,6 +9,24 @@ function Home() {
     "/images/quote4.png",
     "/images/quote3.png",
   ];
+
+  const navigate = useNavigate();
+
+  const handleLogInjourney = () => {
+    navigate("/journeydetails");
+  };
+
+  const handleLogInstation = () => {
+    navigate("/neareststation");
+  };
+
+  const handleLogLostAndFound = () => {
+    navigate("/lostandfound");
+  };
+
+  const handleLogNetworkPage = () => {
+    navigate("/networkpage");
+  };
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const slideInterval = useRef(null);
@@ -166,7 +185,7 @@ function Home() {
                 <button
                   type="button"
                   className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
-                  onClick={() => window.open("/journeydetails", "_blank")}
+                  onClick={handleLogInjourney}
                 >
                   Explore Now
                   <span className="ml-2 text-3xl">&#8594;</span>{" "}
@@ -194,7 +213,7 @@ function Home() {
                 <button
                   type="button"
                   className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
-                  onClick={() => window.open("/neareststation", "_blank")}
+                  onClick={handleLogInstation}
                 >
                   Explore Now
                   <span className="ml-2 text-3xl">&#8594;</span>{" "}
@@ -227,7 +246,7 @@ function Home() {
                 <button
                   type="button"
                   className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
-                  onClick={() => window.open("/lostandfound", "_blank")}
+                  onClick={handleLogLostAndFound}
                 >
                   Explore Now
                   <span className="ml-2 text-3xl">&#8594;</span>{" "}
@@ -254,7 +273,7 @@ function Home() {
                 <button
                   type="button"
                   className="bg-[#03045E] text-white text-xl py-2 px-3 rounded-2xl flex items-center justify-center hover:bg-[#1A1F7E] hover:text-[#C9EAF6] hover:scale-105 transition-transform duration-100 ease-in-out"
-                  onClick={() => window.open("/networkpage", "_blank")}
+                  onClick={handleLogNetworkPage}
                 >
                   Explore Now
                   <span className="ml-2 text-3xl">&#8594;</span>{" "}
