@@ -139,7 +139,7 @@ function Home() {
           backgroundImage: "url('./public/images/black.png')",
         }}
       >
-        <p className="flex text-5xl font-bold text-white items-center justify-center font-sans">
+        <p className="flex text-5xl font-bold text-white items-center justify-center font-sans mt-3">
           INSIDERS OF IMRS
         </p>
       </div>
@@ -274,7 +274,7 @@ function Home() {
           backgroundImage: "url('./public/images/black.png')",
         }}
       >
-        <p className="fex items-center justify-center text-4xl font-bold text-white text-center font-sans">
+        <p className="flex items-center justify-center text-4xl font-bold text-white text-center font-sans mt-3">
           INDORE METRO RAIL STATIONS
         </p>
       </div>
