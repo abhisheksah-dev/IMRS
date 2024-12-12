@@ -62,6 +62,7 @@ https://drive.google.com/file/d/1dZtubsfiBfszXcFpC9pgu0mZ-baBYyda/view?usp=drive
 
 
 "
+              target="_blank"
             >
               <li className="text-white  no-underline" target="_blank">
                 Terms & Conditions
@@ -70,6 +71,7 @@ https://drive.google.com/file/d/1dZtubsfiBfszXcFpC9pgu0mZ-baBYyda/view?usp=drive
             <a
               className="no-underline"
               href="https://drive.google.com/file/d/1pFh0QYmeKMURgNHiv4TNXv_eY1B2xW-i/view?usp=drive_link "
+              target="_blank"
             >
               {" "}
               <li className="text-white no-underline" target="_blank">
