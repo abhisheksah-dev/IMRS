@@ -7,7 +7,7 @@ function AboutUs() {
   return (
     <>
       {/* Section with Background Image */}
-      <section className="font-sans h-screen bg-cover bg-fixed bg-center bg-[url('./public/images/books1.png')]">
+      <section className="font-sans h-screen bg-cover bg-fixed bg-center bg-[url('/images/books1.png')]">
         <div className="container mx-auto py-5 h-full">
           <div className="flex justify-center items-center h-full">
             <div className="w-full max-w-4xl">
@@ -55,7 +55,7 @@ function AboutUs() {
 
       {/* Another Section with a Different Background */}
       <div className="h-3 font-sans"></div>
-      <section className="bg-cover bg-fixed bg-center bg-[url('./public/images/books2.jpg')] relative">
+      <section className="bg-cover bg-fixed bg-center bg-[url('/images/books2.jpg')] relative">
         <div className="container mx-auto py-5">
           <div className="flex justify-center items-center">
             <div className="w-full max-w-4xl">
@@ -75,32 +75,32 @@ function AboutUs() {
                       {[
                         // Map through cards with updated layout and sizes
                         {
-                          img: "./public/images/mobileapplication.png",
+                          img: "/images/mobileapplication.png",
                           alt: "Mobile Application",
                           title: "Mobile Application",
                         },
                         {
-                          img: "./public/images/audio.png",
+                          img: "/images/audio.png",
                           alt: "Audio Indication",
                           title: "Audio Indication",
                         },
                         {
-                          img: "./public/images/onlineticket.png",
+                          img: "/images/onlineticket.png",
                           alt: "Online Ticket Booking",
                           title: "Online Ticket Booking",
                         },
                         {
-                          img: "./public/images/stationinformation.png",
+                          img: "/images/stationinformation.png",
                           alt: "Station Information",
                           title: "Station Information",
                         },
                         {
-                          img: "./public/images/smartcard.png",
+                          img: "/images/smartcard.png",
                           alt: "Station Information",
                           title: "Station Information",
                         },
                         {
-                          img: "./public/images/lastmile.png",
+                          img: "/images/lastmile.png",
                           alt: "Station Information",
                           title: "Station Information",
                         },
@@ -131,7 +131,7 @@ function AboutUs() {
 
         <div className="w-full">
           <img
-            src="./public/images/trainoriginal.png"
+            src="/images/trainoriginal.png"
             alt="Train Image"
             className="w-full h-auto object-cover"
           />
