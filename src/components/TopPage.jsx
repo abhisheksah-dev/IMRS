@@ -5,7 +5,7 @@ function TopPage() {
         {/* Background Image */}
         <img
           className="w-full h-screen object-cover opacity-70"
-          src="./public/images/mainBackground.svg"
+          src="/images/mainBackground.svg"
           alt="Metro Network Background"
         />
 
@@ -45,19 +45,19 @@ function TopPage() {
           {/* Cards */}
           {[
             {
-              img: "./public/images/buslogo.png",
+              img: "/images/buslogo.png",
               title: "IBUS CONNECTIVITY",
             },
             {
-              img: "./public/images/trainlogo.png",
+              img: "/images/trainlogo.png",
               title: "RAILWAY STATION CONNECTIVITY",
             },
             {
-              img: "./public/images/busstop.png",
+              img: "/images/busstop.png",
               title: "BUS STATION CONNECTIVITY",
             },
             {
-              img: "./public/images/airplanelogo.png",
+              img: "/images/airplanelogo.png",
               title: "AIRPORT CONNECTIVITY",
             },
           ].map((card, index) => (

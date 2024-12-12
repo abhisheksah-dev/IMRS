@@ -18,7 +18,7 @@ function Header({ setLoading }) {
       <div>
         <img
           className="w-[100px] bg-inherit"
-          src="./public/images/MetroLogo5.png"
+          src="/images/MetroLogo5.png"
           alt="logo"
         />
       </div>

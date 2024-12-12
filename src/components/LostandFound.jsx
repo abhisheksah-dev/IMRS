@@ -36,7 +36,7 @@ const LostAndFound = () => {
       </div>
       <div className="w-full">
         <img
-          src="./public/images/trainoriginal.png"
+          src="/images/trainoriginal.png"
           alt="Train Image"
           className="w-full h-auto object-cover"
         />

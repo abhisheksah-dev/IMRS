@@ -12,7 +12,7 @@ function Securitypage() {
             {/* Background Image */}
             <img
               className="w-full h-screen object-cover"
-              src="./public/images/SecurityBackground.png"
+              src="/images/SecurityBackground.png"
               alt="Security Background"
             />
 

@@ -40,7 +40,7 @@ const HorizontalImageScroll = () => {
       onMouseMove={handleMouseMove}
     >
       <img
-        src="/public/images/runningtrain2.svg"
+        src="/images/runningtrain2.svg"
         alt="Indore Railway Station"
         className="h-full min-w-[350%] object-cover items-start "
       />

@@ -14,7 +14,7 @@ function Footer() {
             >
               <img
                 className="w-[30px] brightness-125"
-                src="./public/images/instagram.png"
+                src="/images/instagram.png"
                 alt="Instagram"
               />
             </a>
@@ -25,7 +25,7 @@ function Footer() {
             >
               <img
                 className="w-[40px] brightness-125"
-                src="./public/images/facebook.png"
+                src="/images/facebook.png"
                 alt="Facebook"
               />
             </a>
@@ -36,7 +36,7 @@ function Footer() {
             >
               <img
                 className="w-[30px] brightness-125"
-                src="./public/images/twitter.png"
+                src="/images/twitter.png"
                 alt="Twitter"
               />
             </a>
@@ -47,7 +47,7 @@ function Footer() {
             >
               <img
                 className="w-[30px] brightness-125"
-                src="./public/images/linkedin.png"
+                src="/images/linkedin.png"
                 alt="LinkedIn"
               />
             </a>

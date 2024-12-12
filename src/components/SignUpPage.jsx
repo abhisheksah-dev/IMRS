@@ -7,7 +7,7 @@ function SignUpPage() {
   const handleSignInClick = () => navigate("/SignIn");
   return (
     <>
-      <section className="h-screen bg-cover bg-center bg-[url('./public/images/SignInBackground.jpeg')]">
+      <section className="h-screen bg-cover bg-center bg-[url('/images/SignInBackground.jpeg')]">
         <div className="container mx-auto py-5 h-full">
           <div className="flex justify-center items-center h-full">
             <div className="w-full max-w-4xl">
@@ -32,7 +32,7 @@ function SignUpPage() {
                   <div className="w-full lg:w-1/2 p-6">
                     <div className="text-center mb-6">
                       <img
-                        src="./public/images/MetroLogo5.png"
+                        src="/images/MetroLogo5.png"
                         alt="logo"
                         className="w-44 mx-auto"
                       />

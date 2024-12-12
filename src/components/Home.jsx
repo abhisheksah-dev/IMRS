@@ -3,10 +3,10 @@ import HorizontalImageScroll from "./HorizontalImageScroll";
 
 function Home() {
   const images = [
-    "./public/images/quote1.png",
-    "./public/images/quote2.png",
-    "./public/images/quote4.png",
-    "./public/images/quote3.png",
+    "/images/quote1.png",
+    "/images/quote2.png",
+    "/images/quote4.png",
+    "/images/quote3.png",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -66,7 +66,7 @@ function Home() {
         {/* Image */}
         <img
           className="w-full max-h-[60vh]"
-          src="./public/images/maintrain.svg"
+          src="/images/maintrain.svg"
           alt="Header"
         />
       </div>
@@ -74,14 +74,14 @@ function Home() {
       <div
         className="flex flex-col flex-grow bg-cover bg-center py-10 h-[40vh] gap-3 font-sans mb-1"
         style={{
-          backgroundImage: "url('./public/images/black.png')",
+          backgroundImage: "url('/images/black.png')",
         }}
       >
         <div className="flex items-center justify-center">
-          <img src="./public/images/imrsimage.png" alt="IMRS Logo" />
+          <img src="/images/imrsimage.png" alt="IMRS Logo" />
         </div>
         <div className="flex items-center justify-center">
-          <img src="./public/images/imrsbigimage.png" alt="IMRS Big Image" />
+          <img src="/images/imrsbigimage.png" alt="IMRS Big Image" />
         </div>
       </div>
 
@@ -136,7 +136,7 @@ function Home() {
       <div
         className="flex items-center justify-center bg-cover bg-center py-10 h-[10vh] gap-3 mt-1 shadow-md"
         style={{
-          backgroundImage: "url('./public/images/black.png')",
+          backgroundImage: "url('/images/black.png')",
         }}
       >
         <p className="flex text-5xl font-bold text-white items-center justify-center font-sans mt-3">
@@ -153,7 +153,7 @@ function Home() {
           </h1>
           <div className="flex items-center justify-center">
             <div className="flex-1">
-              <img src="./public/images/studious.png" alt="" />
+              <img src="/images/studious.png" alt="" />
             </div>
             <div className="flex-1 lg:mt-16 ">
               <div className="flex flex-col items-center gap-3">
@@ -203,7 +203,7 @@ function Home() {
               </div>
             </div>
             <div className="flex-1 justify-center items-center">
-              <img src="./public/images/central.png" alt="" />
+              <img src="/images/central.png" alt="" />
             </div>
           </div>
         </div>
@@ -214,7 +214,7 @@ function Home() {
           </h1>
           <div className="flex items-center justify-center">
             <div className="flex-1">
-              <img src="./public/images/pocket.png" alt="" />
+              <img src="/images/pocket.png" alt="" />
             </div>
             <div className="flex-1  ">
               <div className="flex flex-col items-center gap-3">
@@ -263,7 +263,7 @@ function Home() {
               </div>
             </div>
             <div className="flex-1">
-              <img src="./public/images/map.png" alt="" />
+              <img src="/images/map.png" alt="" />
             </div>
           </div>
         </div>
@@ -271,7 +271,7 @@ function Home() {
       <div
         className="flex items-center justify-center bg-cover bg-center py-10 h-[10vh] gap-3 mt-1 mb-1 font-sans"
         style={{
-          backgroundImage: "url('./public/images/black.png')",
+          backgroundImage: "url('/images/black.png')",
         }}
       >
         <p className="flex items-center justify-center text-4xl font-bold text-white text-center font-sans mt-3">
@@ -281,7 +281,7 @@ function Home() {
 
       <HorizontalImageScroll />
       <div>
-        <img className="mb-2" src="./public/images/elavated.png" alt="" />
+        <img className="mb-2" src="/images/elavated.png" alt="" />
       </div>
     </>
   );

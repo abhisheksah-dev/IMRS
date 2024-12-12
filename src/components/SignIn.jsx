@@ -6,7 +6,7 @@ const SignUp = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="./public/images/SignInBackground.jpeg"
+          src="/images/SignInBackground.jpeg"
           alt="Train Background"
           className="w-full h-full object-cover opacity-70"
         />

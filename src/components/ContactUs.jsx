@@ -6,7 +6,7 @@ const ContactUs = () => {
       <div
         className="font-sans flex items-center justify-start min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gray-800"
         style={{
-          backgroundImage: `url("/public/images/contact.png")`,
+          backgroundImage: `url("/images/contact.png")`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -91,7 +91,7 @@ const ContactUs = () => {
       {/* Train Image */}
       <div className="w-full">
         <img
-          src="./public/images/trainoriginal.png"
+          src="/images/trainoriginal.png"
           alt="Train Image"
           className="w-full h-auto object-cover"
         />
