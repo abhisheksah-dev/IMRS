@@ -3,12 +3,12 @@ import { FaPhone } from "react-icons/fa";
 
 const HelplineSection = () => {
   const helplineData = [
-    { title: "Women Helpline", phone: "+91 72359 25876" },
-    { title: "Child Helpline", phone: "+91 72359 25876" },
-    { title: "CM Helpline", phone: "+91 72359 25876" },
-    { title: "Indore Police", phone: "+91 72359 25876" },
-    { title: "Ambulance", phone: "+91 72359 25876" },
-    { title: "Fire Brigade", phone: "+91 72359 25876" },
+    { title: "Women Helpline", phone: "1091" },
+    { title: "Child Helpline", phone: "1098" },
+    { title: "CM Helpline", phone: "181" },
+    { title: "Indore Police", phone: "100" },
+    { title: "Ambulance", phone: "102" },
+    { title: "Fire Brigade", phone: "101" },
   ];
 
   return (
@@ -32,7 +32,7 @@ const HelplineSection = () => {
                 </span>
                 <a
                   href={`tel:${helpline.phone}`}
-                  className="flex items-center text-blue-600 hover:text-blue-800 gap-2 bg-white px-4 py-2 rounded-2xl"
+                  className="flex items-center text-blue-600 hover:text-blue-800 gap-2 bg-white px-4 py-2 rounded-2xl no-underline"
                 >
                   <FaPhone />
 

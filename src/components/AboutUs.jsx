@@ -21,29 +21,28 @@ function AboutUs() {
                       </h2>
                     </div>
                     <div className="mx-auto max-w-full sm:max-w-3xl md:max-w-4xl px-5 sm:px-8 py-5 sm:py-8 rounded-xl shadow-lg text-justify bg-transparent bg-opacity-50">
-                      <p className=" text-2xl sm:text-lg md:text-lg text-gray-800 leading-relaxed font-sans text-center">
-                        Our project introduces a web-based Indore Metro
-                        Management System that aims to tackle everyday
-                        challenges faced by metro passengers. Imagine a tourist
-                        arriving in Indore for the first time, eager to explore
-                        the city but unsure of how to find the nearest metro
-                        station, the cost of the journey, or how to navigate the
-                        entire network. With our system, they can easily access
-                        an interactive map, find the closest station, and get
-                        accurate details like fare, distance, and number of
-                        stops. If someone leaves their bag on a train, he panics
-                        as they wonder how to recover it. <br />
+                      <p className=" text-2xl sm:text-lg md:text-lg text-gray-800 leading-relaxed font-sans text-center font-medium">
+                        The Indore Metro Rail Saathi (IMRS) is designed to make
+                        navigating Indore's metro system easier, more efficient,
+                        and more enjoyable for all. In a city known for its
+                        cleanliness and progressive spirit, IMRS is the perfect
+                        travel companion. It allows users to easily locate the
+                        nearest metro station, calculate fares, and estimate
+                        travel times. Picture yourself seamlessly boarding a
+                        metro after checking the precise schedule, or
+                        discovering a nearby station while visiting iconic
+                        landmarks like Rajwada—IMRS takes care of every detail.
                         <br />
-                        Our Lost and Found feature provides a quick and easy way
-                        to report and retrieve lost items, making it simple for
-                        passengers to resolve such situations. Additionally, the
-                        platform offers a clear and detailed overview of the
-                        entire metro network, allowing users, whether they’re
-                        regular riders or first-time travelers, to confidently
-                        navigate the metro system without confusion or stress.
-                        This platform is designed to ensure that every
-                        passenger, no matter their experience level, can use
-                        Indore’s metro service easily and efficiently.
+                        <br />
+                        But IMRS is more than just a navigation tool; it’s a
+                        platform dedicated to enhancing the travel experience.
+                        With features like Lost & Found to help reunite
+                        passengers with misplaced items, and user-friendly route
+                        information for first-time travelers, IMRS makes it
+                        simple to navigate Indore’s metro system. Reflecting the
+                        city’s commitment to innovation and continuous growth,
+                        IMRS is not just a transit solution—it’s a step towards
+                        a smarter, more connected Indore.
                       </p>
                     </div>
                   </section>
