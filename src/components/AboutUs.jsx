@@ -82,7 +82,7 @@ function AboutUs() {
                         {
                           img: "/images/audio.png",
                           alt: "Audio Indication",
-                          title: "Audio Indication",
+                          title: "Audio Navigator",
                         },
                         {
                           img: "/images/onlineticket.png",
@@ -95,14 +95,14 @@ function AboutUs() {
                           title: "Station Information",
                         },
                         {
-                          img: "/images/smartcard.png",
+                          img: "/images/trip.png",
                           alt: "Station Information",
-                          title: "Station Information",
+                          title: "Trip Planner",
                         },
                         {
-                          img: "/images/lastmile.png",
+                          img: "/images/smartcard.png",
                           alt: "Station Information",
-                          title: "Station Information",
+                          title: "Smart Card",
                         },
                       ].map((item, index) => (
                         <div
