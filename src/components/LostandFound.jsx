@@ -9,7 +9,7 @@ const LostAndFound = () => {
       >
         <div className="w-full max-w-3xl p-10 bg-white rounded-xl shadow-lg">
           <h1 className="text-4xl font-bold text-center bg-blue-900 mb-8 text-white rounded-lg p-3">
-            LOST & FOUND i am checking ok agian checking
+            LOST & FOUND
           </h1>
           <p className="text-center text-lg text-gray-700 mb-10">
             Lost items? Don’t worry!!! We have a way for it ...
