@@ -1,8 +1,5 @@
-import React, { useState } from "react";
-import { TfiAlarmClock } from "react-icons/tfi";
-import { FaRoute, FaLocationDot } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
-
+import React from "react";
+import { useState } from "react";
 class StationNode {
   constructor(name, distancePrev, distanceNext) {
     this.name = name;
@@ -207,89 +204,84 @@ metroRoute.insertEnd("ISBT/ MR 10 Flyover", 780, 1760);
 metroRoute.insertEnd("MR 10 Road", 1760, 1250);
 metroRoute.insertEnd("Bhawarshala Square", 1250, 1000);
 
-function Journey() {
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
-  const [fare, setFare] = useState("---");
-  const [time, setTime] = useState("---");
-  const [distance, setDistance] = useState("---");
-  const [stops, setStops] = useState("---");
+const Payment = () => {
+    const [from, setFrom] = useState("");
+    const [to, setTo] = useState("");
 
-  const handleCalculate = () => {
-    if (from && to && from !== to) {
-      const stopsCount = metroRoute.countStations(from, to);
-      const calculatedFare = metroRoute.calculateFare(stopsCount);
-      const calculatedDistance = metroRoute.calculateDistance(from, to);
-      const calculatedTime = metroRoute.calculateTime(from, to);
 
-      if (calculatedDistance > 1000) {
-        setDistance(`${calculatedDistance / 1000} km`);
+    const handleCalculate = () => {
+      if (from && to && from !== to) {
+        const stopsCount = metroRoute.countStations(from, to);
+        const calculatedFare = metroRoute.calculateFare(stopsCount);
+        const calculatedDistance = metroRoute.calculateDistance(from, to);
+        const calculatedTime = metroRoute.calculateTime(from, to);
+  
+        if (calculatedDistance > 1000) {
+          setDistance(`${calculatedDistance / 1000} km`);
+        } else {
+          setDistance(`${calculatedDistance} m`);
+        }
+  
+        setFare(`₹${calculatedFare}`);
+  
+        setTime(`${calculatedTime} min`);
+        setStops(stopsCount);
       } else {
-        setDistance(`${calculatedDistance} m`);
+        alert("Please select valid source and destination stations.");
       }
+    };
 
-      setFare(`₹${calculatedFare}`);
-
-      setTime(`${calculatedTime} min`);
-      setStops(stopsCount);
-    } else {
-      alert("Please select valid source and destination stations.");
-    }
-  };
-  const navigate = useNavigate();
-
-  const handlePayment = () => {
-    navigate("/payment");
-  };
-
-  const stations = [
-    "Vijay Nagar Square",
-    "Radisson Square",
-    "Mumtaj Bag Colony",
-    "Khajrana Square",
-    "Bengali Square",
-    "Patrakar Colony",
-    "Palasia Square",
-    "High Court",
-    "Indore Railway Station",
-    "Rajwada Palace",
-    "Chota Ganpati",
-    "Bada Ganpati",
-    "Ramchandra Nagar Square",
-    "BSF/ Kalani Nagar",
-    "Airport",
-    "Gandhi Nagar/Nanod",
-    "Super Corridor 6",
-    "Super Corridor 5",
-    "Super Corridor 4",
-    "Super Corridor 3",
-    "Super Corridor 2",
-    "Super Corridor 1",
-    "Bhawarshala Square",
-    "MR 10 Road",
-    "ISBT/ MR 10 Flyover",
-    "Chandragupta Square",
-    "Hira Nagar",
-    "Bapat Square",
-    "Meghdoot Garden",
-  ];
-
+    const stations = [
+      "Vijay Nagar Square",
+      "Radisson Square",
+      "Mumtaj Bag Colony",
+      "Khajrana Square",
+      "Bengali Square",
+      "Patrakar Colony",
+      "Palasia Square",
+      "High Court",
+      "Indore Railway Station",
+      "Rajwada Palace",
+      "Chota Ganpati",
+      "Bada Ganpati",
+      "Ramchandra Nagar Square",
+      "BSF/ Kalani Nagar",
+      "Airport",
+      "Gandhi Nagar/Nanod",
+      "Super Corridor 6",
+      "Super Corridor 5",
+      "Super Corridor 4",
+      "Super Corridor 3",
+      "Super Corridor 2",
+      "Super Corridor 1",
+      "Bhawarshala Square",
+      "MR 10 Road",
+      "ISBT/ MR 10 Flyover",
+      "Chandragupta Square",
+      "Hira Nagar",
+      "Bapat Square",
+      "Meghdoot Garden",
+    ];
+    
   return (
     <>
-      <div className="bg-white  flex justify-center p-6 font-sans mb-6">
-        <div className="shadow rounded-lg p-8 w-full max-w-6xl">
-          <h2 className="bg-blue-900 text-center text-3xl  font-bold text-white p-3 rounded-xl mb-6 font-sans">
-            JOURNEY DETAILS
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-6 ">
-            <div className="grid grid-cols-1 gap-0 bg-[#dbeaff]  rounded-xl">
-              <div className=" p-6 rounded-lg">
-                <div className="mb-4">
-                  <label
-                    htmlFor="from"
-                    className="block font-semibold text-blue-900 text-xl font-sans"
+      <div className="flex justify-center items-center py-4 bg-gray-100 ">
+        {/* Outer container (centered, with some padding) */}
+        <div className="bg-[#b8dfee] border border-gray-300 rounded-lg shadow-md p-6 w-full max-w-md">
+          {/* Title */}
+          <h1 className="text-3xl font-bold text-center bg-blue-900 mb-8 text-white rounded-lg p-3">
+            Online Ticket Booking
+          </h1>
+
+          {/* Booking Form */}
+          <form className="space-y-4">
+            {/* FROM */}
+            <div>
+            <label
+                    htmlFor="to"
+                    className="block font-semibold mb-2 text-blue-900 text-xl"
                   >
-                    From
+                    FROM
                   </label>
                   <select
                     id="from"
@@ -303,11 +295,11 @@ function Journey() {
                       </option>
                     ))}
                   </select>
-                </div>
-              </div>
-              <div className=" p-6 rounded-lg">
-                <div className="mb-2">
-                  <label
+            </div>
+
+            {/* TO */}
+            <div>
+            <label
                     htmlFor="to"
                     className="block font-semibold mb-2 text-blue-900 text-xl"
                   >
@@ -325,74 +317,82 @@ function Journey() {
                       </option>
                     ))}
                   </select>
-                </div>
-              </div>
-              <div className="flex justify-center m-3">
-                <button
-                  className="bg-blue-600 text-xl text-white py-3 px-16 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 font-sans"
-                  onClick={handleCalculate}
-                >
-                  Get Details
-                </button>
-              </div>
             </div>
+
+            {/* Mobile Number */}
             <div>
-              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-6 font-sans">
-                <div className="bg-[#F1FDFF] p-6 shadow-lg rounded-lg flex flex-col items-center border-2 border-blue-600">
-                  <i className="text-4xl text-blue-600 mb-4">
-                    <FaLocationDot />
-                  </i>
-                  <h3 className="text-gray-600 font-semibold text-lg font-sans">
-                    Stops
-                  </h3>
-                  <p className="text-blue-900 font-bold text-2xl">{stops}</p>
-                </div>
-
-                <div className="bg-[#F1FDFF] p-6 shadow-lg rounded-lg flex flex-col items-center border-2 border-blue-600">
-                  <i className="text-4xl text-blue-600 mb-4">💳</i>
-                  <h3 className="text-gray-600 font-semibold text-lg">Fare</h3>
-                  <p className="text-blue-900 font-bold text-2xl">{fare}</p>
-                </div>
-
-                <div className="bg-[#F1FDFF] p-6 shadow-lg rounded-lg flex flex-col items-center border-2 border-blue-600">
-                  <i className="text-4xl text-blue-600 mb-4">
-                    <FaRoute />
-                  </i>
-                  <h3 className="text-gray-600 font-semibold text-lg">
-                    Distance
-                  </h3>
-                  <p className="text-blue-900 font-bold text-2xl">{distance}</p>
-                </div>
-
-                <div className="bg-[#F1FDFF] p-6 shadow-lg rounded-lg flex flex-col items-center border-2 border-blue-600">
-                  <i className="text-4xl text-blue-600 mb-4">
-                    <TfiAlarmClock />
-                  </i>
-                  <h3 className="text-gray-600 font-semibold text-lg">Time</h3>
-                  <p className="text-blue-900 font-bold text-2xl">{time}</p>
-                </div>
-              </div>
-              <div className="flex justify-center m-3">
-                <button
-                  className="bg-blue-600 text-xl text-white py-3 px-16 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 font-sans"
-                  onClick={handlePayment}
-                >
-                  Book ticket
-                </button>
-              </div>
+              <label
+                htmlFor="mobileNumber"
+                className="block font-semibold mb-1"
+              >
+                Mobile Number
+              </label>
+              <input
+                type="text"
+                id="mobileNumber"
+                placeholder="+91 XXXXX XXXXX"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
             </div>
-          </div>
+
+            {/* Ticket Type */}
+            <div>
+              <label htmlFor="ticketType" className="block font-semibold mb-1">
+                Ticket Type
+              </label>
+              <select
+                id="ticketType"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+              >
+                <option value="single">Single Journey</option>
+                <option value="return">Return Journey</option>
+              </select>
+            </div>
+
+            {/* Number of Tickets */}
+            <div>
+              <label
+                htmlFor="ticketsCount"
+                className="block font-semibold mb-1"
+              >
+                Number of Tickets
+              </label>
+              <input
+                type="number"
+                id="ticketsCount"
+                placeholder="1"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
+            </div>
+
+            {/* Total Fare */}
+            <div>
+              <label htmlFor="totalFare" className="block font-semibold mb-1">
+                Total Fare
+              </label>
+              <input
+                type="text"
+                id="totalFare"
+                placeholder="₹0.00"
+                disabled
+                className="w-full px-3 py-2 border border-gray-300 rounded bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
+            </div>
+
+            {/* PAYMENT Button */}
+            <div className="pt-2">
+              <button
+                type="submit"
+                className="block w-full py-2 bg-blue-600 text-white text-xl font-bold rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 font-sans"
+              >
+                PAYMENT
+              </button>
+            </div>
+          </form>
         </div>
-      </div>
-      <div className="w-full">
-        <img
-          src="./images/trainoriginal.png"
-          alt="Train Image"
-          className="w-full h-auto object-cover"
-        />
       </div>
     </>
   );
-}
+};
 
-export default Journey;
+export default Payment;
