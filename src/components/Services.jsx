@@ -32,10 +32,17 @@ function Services() {
       <main
         className="flex-grow bg-cover bg-center py-10 h-[80vh] font-sans "
         style={{
+<<<<<<< HEAD
           backgroundImage: "url('./images/mainlayout.png')",
         }}
       >
         <div className="grid grid-cols-1 md:grid-cols-2  gap-6 px-6 max-w-4xl mx-auto mt-5 w-[100%] h-[100%] md:h-[70%] text-4xl">
+=======
+          backgroundImage: "url('./public/images/mainlayout.png')",
+        }}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-6 px-6 max-w-4xl mx-auto mt-3 w-[100%] h-[100%] md:h-[70%] text-4xl">
+>>>>>>> 0983c841643d5bc456784a105744af687b880886
           <button
             className="bg-gradient-to-br from-[#cfe5ff] to-[#98c2ff] border-4 border-blue-500 text-blue-800 font-semibold  py-4 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400 text-2xl "
             onClick={handleLogInjourney}
